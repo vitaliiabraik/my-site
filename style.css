@@ -1,0 +1,143 @@
+/* ==========================================
+   1. МОДЕЛЬ BOX-SIZING ТА СКИНУТТЯ СТИЛІВ
+   ========================================== */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+@import url('https://googleapis.com');
+
+/* ==========================================
+   2. ОСНОВА СТОРІНКИ (ФОН НА ВЕСЬ ЕКРАН)
+   ========================================== */
+body {
+    background-color: #1a1a1a;
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://logo-marque.com/wp-content/uploads/2020/04/Minecraft-Symbole.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    color: #dddddd;
+    font-family: 'Courier New', Courier, monospace;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Головний контейнер сайту (центрирує весь контент) */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* ==========================================
+   3. НОВИЙ СЕЛЕКТОР: ТЕМАТИЧНІ БЛОКИ (КАРТКИ)
+   ========================================== */
+.card {
+    background: rgba(0, 0, 0, 0.75);
+    border: 1px solid #444;
+    padding: 20px;
+    margin-bottom: 25px; /* Відступ між тематичними блоками */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px #000;
+}
+
+/* Очищення фонів елементів всередині картки, щоб не було «накладання» */
+.card p, .card li {
+    background: transparent;
+    padding: 0;
+    margin-bottom: 10px;
+}
+
+/* ==========================================
+   4. ЗАГОЛОВКИ ТА ЕЛЕМЕНТИ ТЕКСТУ
+   ========================================== */
+h1, h2, h3 {
+    font-family: 'Press Start 2P', monospace;
+    color: #55ff55;
+    text-shadow: 3px 3px #000000;
+    margin-top: 0; /* Прибрано верхній відступ, бо картка має свій padding */
+}
+
+h1 {
+    font-size: 1.4rem;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.85);
+    padding: 20px;
+    border: 4px solid #555;
+    box-shadow: inset 0 0 10px #000;
+    margin-bottom: 25px;
+}
+
+ol {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 15px 15px 15px 35px;
+    border: 2px solid #333;
+    margin: 15px 0;
+}
+
+/* ==========================================
+   5. ОФОРМЛЕННЯ ТАБЛИЦІ (ЗАЛИШАЄТЬСЯ В КАРТЦІ)
+   ========================================== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 15px 0 0 0;
+    border: 2px solid #333;
+}
+
+th, td {
+    border: 1px solid #444;
+    text-align: center;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+th {
+    background: rgba(0, 85, 0, 0.85);
+    color: #55ff55;
+}
+
+/* ==========================================
+   6. КОНТЕЙНЕР «ГАЛЕРЕЯ» ТА АДАПТИВНІ ФОТО
+   ========================================== */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 15px;
+}
+
+/* СТИЛІ ДЛЯ IMG ОПТИМІЗОВАНО (без зайвих маргінів та індивідуальних тіней) */
+img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border: 3px solid #333;
+    border-radius: 6px;
+    image-rendering: pixelated;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+img:hover {
+    transform: scale(1.03);
+    border-color: #55ff55;
+}
+
+/* ==========================================
+   7. КНОПКИ ТА ПОСИЛАННЯ
+   ========================================== */
+a {
+    display: inline-block;
+    background: #5555ff;
+    color: #ffffff;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-family: 'Press Start 2P', monospace;
+    font-size: 0.7rem;
+    border: 2px solid #fff;
+    box-shadow: 3px 3px #000;
+    margin-top: 15px;
+}
+
+a:hover {
+    background: #7575ff;
+}
