@@ -4,6 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Minecraft Світ</title>
+    
+    <meta name="description" content="Ласкаво просимо до світу Minecraft! Про гру, режими гри (виживання, творчий, хардкор, пригоди), ворожі, дружні та нейтральні моби.">
+    <meta name="keywords" content="Minecraft, Майнкрафт, режими гри, моби, кріпер, зомбі, скелет">
+    
+    <meta property="og:title" content="Minecraft Світ">
+    <meta property="og:description" content="Ласкаво просимо до світу Minecraft! Про гру, режими гри, ворожі, дружні та нейтральні моби.">
+    <meta property="og:image" content="Foto/Кріпер.jpg">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://minecraft.wiki">
+    
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
 </head>
 <body id="top">
@@ -11,46 +22,46 @@
     <header class="site-header">
         <div class="header-container">
             <div class="logo">Minecraft</div>
-            <nav>
+            <nav aria-label="Головна навігація">
                 <ul class="nav-menu">
                     <li><a href="#about">Про гру</a></li>
                     <li><a href="#modes">Режими гри</a></li>
                     <li><a href="#mobs">Моби</a></li>
                     <li><a href="#gallery">Галерея</a></li>
+                    <li><a href="#feedback">Зворотний зв'язок</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <div class="container">
+    <main class="container">
+        
         <h1>Ласкаво просимо до світу Minecraft!</h1>
 
         <section id="about" class="site-section">
-            <!-- Картка 1: Про гру -->
-            <div class="card">
+            <article class="card">
+                <h2>Про гру</h2>
                 <p><strong>Minecraft</strong> - це пісочниця, де можна будувати та виживати.</p>
-            </div>
+            </article>
         </section>
 
         <section id="modes" class="site-section">
-            <!-- Картка 2: Режими гри (Додано клас card-relative для зв язки relative + absolute) -->
-            <div class="card card-relative">
+            <article class="card card-relative">
                 <span class="badge">ХІТ</span>
                 <h2>Режими гри</h2>
                 <ol>
-                    <li><strong>Виживання</strong> - класичний режим, де потрібно добувати їжу, recursos та захищатися від монстрів.</li>
-                    <li><strong>Творчий</strong> - режим з нескінченними ресурсами, де гравець не може загинету і має повну свободу для будівництва.</li>
-                    <li><strong>Хардкор</strong> - це найскладніший варіант виживання, у якому складність гри назавжди зафіксована на рівні Складно , а після загибелі гравця світ блокується або видаляється.</li>
+                    <li><strong>Виживання</strong> - класичний режим, де потрібно добувати їжу, ресурси та захищатися від монстрів.</li>
+                    <li><strong>Творчий</strong> - режим з нескінченними ресурсами, де гравець не може загинути і має повну свободу для будівництва.</li>
+                    <li><strong>Хардкор</strong> - це найскладніший варіант виживання, у якому складність гри назавжди зафіксована на рівні Складно, а після загибелі гравця світ блокується або видаляється.</li>
                     <li><strong>Пригоди</strong> - спеціальний ігровий режим, призначений для проходження кастомних карт, квестів та історій, створених іншими гравцями.</li>
                 </ol>
-            </div>
+            </article>
         </section>
 
         <section id="mobs" class="site-section">
-            <!-- Картка 3: Моби, Таблиця та Галерея -->
-            <div class="card">
+            <article class="card">
                 <h2>Моби</h2>
-                <p>Усі живі істоти в грі називаються <strong>мобами</strong>. Вони поділяються на три типи: <em>Ворожі</em>, <em>Дружні</em> та <em>Нейтральні</em>.</p>
+                <p>Усі живі істоти в грі називаються <strong>мобами</strong>. Вони поділяються на три типу: <em>Ворожі</em>, <em>Дружні</em> та <em>Нейтральні</em>.</p>
 
                 <table>
                     <thead>
@@ -78,19 +89,88 @@
                         </tr>
                     </tbody>
                 </table>
-            </div>
+            </article>
         </section>
 
         <section id="gallery" class="site-section-gallery">
+            <h2>Галерея мобів</h2>
             <div class="grid-gallery">
-                <img src="Foto/Кріпер.jpg" alt="Майнкрафт Кріпер">
-                <img src="Foto/Зомбі.webp" alt="Майнкрафт Зомбі">
-                <img src="Foto/Скелет.jpg" alt="Майнкрафт Скелет">
+                <img src="Foto/Кріпер.jpg" alt="Майнкрафт Кріпер - зелений ворожий моб">
+                <img src="Foto/Зомбі.jpg" alt="Майнкрафт Зомбі - класичний ворожий моб">
+                <img src="Foto/Скелет.jpg" alt="Майнкрафт Скелет - ворожий моб із луком">
             </div>
         </section>
 
-        <a href="https://minecraft.wiki" target="_blank">Майнкрафт вікі</a>
-    </div>
-    <a href="#top" class="back-to-top" aria-label="Вгору">↑</a>
+        <section id="feedback" class="site-section">
+            <article class="card">
+                <h2>Зворотний зв'язок</h2>
+                <form class="feedback-form" action="#" method="POST">
+                    
+                    <div class="form-group">
+                        <label for="user-name">Ваше ім'я:</label>
+                        <input type="text" id="user-name" name="userName" placeholder="Стів" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="user-email">Електронна пошта:</label>
+                        <input type="email" id="user-email" name="userEmail" placeholder="stevie@minecraft.world" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="topic-select">Тема звернення:</label>
+                        <select id="topic-select" name="topic" required>
+                            <option value="" disabled selected>Оберіть варіант...</option>
+                            <option value="bug">Знайшов баг у грі</option>
+                            <option value="idea">Ідея для моду</option>
+                            <option value="other">Інше</option>
+                        </select>
+                    </div>
+
+                    <fieldset class="fieldset-group">
+                        <legend class="fieldset-legend">Ваш ігровий стаж:</legend>
+                        
+                        <label class="radio-label" for="experience-beginner">
+                            <input type="radio" id="experience-beginner" name="experience" value="beginner" checked>
+                            Новачок
+                        </label>
+                        
+                        <label class="radio-label" for="experience-player">
+                            <input type="radio" id="experience-player" name="experience" value="player">
+                            Досвідчений гравець
+                        </label>
+                        
+                        <label class="radio-label" for="experience-pro">
+                            <input type="radio" id="experience-pro" name="experience" value="pro">
+                            Майстер (Ветеран)
+                        </label>
+                    </fieldset>
+
+                    <div class="form-group">
+                        <label for="message-text">Ваше повідомлення:</label>
+                        <textarea id="message-text" name="message" placeholder="Опишіть ваші пригоди або питання..." required></textarea>
+                    </div>
+
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="agreement-checkbox" name="agreement" value="accepted" required>
+                        <label for="agreement-checkbox">Я згоден на надсилання ігрової статистики</label>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Надіслати</button>
+                </form>
+            </article>
+        </section>
+
+        <aside class="sidebar-links">
+            <h2>Додаткова інформація</h2>
+            <a href="https://minecraft.wiki" target="_blank">Майнкрафт вікі</a>
+        </aside>
+
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; Minecraft Світ. Усі права захищено.</p>
+    </footer>
+
+    <a href="#top" class="back-to-top" aria-label="Повернутися нагору"> ↑ </a>
 </body>
 </html>
